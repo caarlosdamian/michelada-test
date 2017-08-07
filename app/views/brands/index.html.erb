@@ -1,0 +1,20 @@
+<div class="panel panel-default">
+  <div class="panel-heading">Brand List</div>
+  <table class="table">
+    <tr>
+      <th>Name</th>
+
+    <% @brands.each do |brand| %>
+      <tr>
+        <td><%= brand.name %></td>
+        <td><%= link_to 'Open', brand_path(brand) %></td>
+          <td><%= link_to 'Edit', edit_brand_path(brand) %></td>
+          <td><%= link_to 'Delete', brand,
+                method: :delete,
+                data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </table>
+</div>
+
+<%= link_to 'New Brand', new_brand_path %>

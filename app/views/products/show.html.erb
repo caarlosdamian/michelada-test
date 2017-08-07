@@ -1,0 +1,13 @@
+
+<dl>
+  <dt>Name</dt>
+  <dd><%= @product.name %></dd>
+  <dt>Brand</dt>
+  <dd><%= @product.brand.name %></dd>
+  <dt>Description</dt>
+  <dd><%= @product.description %></dd>
+  <dt>Price</dt>
+  <%= number_to_currency(@product.price) %>
+</dl>
+
+ <%= link_to 'List of product', products_path %>
